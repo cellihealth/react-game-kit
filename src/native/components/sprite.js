@@ -10,7 +10,10 @@ export default class Sprite extends Component {
     onPlayStateChanged: PropTypes.func,
     repeat: PropTypes.bool,
     scale: PropTypes.number,
-    src: PropTypes.string,
+    src: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     state: PropTypes.number,
     steps: PropTypes.array,
     style: PropTypes.object,
